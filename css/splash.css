@@ -1,0 +1,208 @@
+ * {
+   	box-sizing: border-box;
+}
+.splashScreen{
+
+
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background:black;
+}
+
+.radar {
+  width: 400px;
+  height: 400px;
+  /*background: #000 url("../radarBG.png") no-repeat ; */
+  /*background-image: repeating-linear-gradient(0deg,transparent,transparent 30px,#4c4c4c 30px,#4c4c4c 31px),repeating-linear-gradient(-90deg,transparent,transparent 30px,#4c4c4c 30px,#4c4c4c 31px);*/
+background-size: 31px 31px;
+ background-position: -6px 0px;
+  border: 5px solid dodgerblue;
+  border-radius: 50%;
+  overflow: hidden !important;
+
+  position: relative;
+  top:50px;
+  left: 55px;
+  transition: transform 2.5s;
+
+  animation: radarcolorchange 15s linear infinite;
+
+}
+.radar_large{
+  transform: scale(4) translate(0%,0%);
+}
+.waveguide {
+  /*background-image: linear-gradient(225deg, dodgerblue 15%, transparent 60%); */
+  background-color: dodgerblue;
+  height: 200px;
+  width: 200px;
+  border-right: 3px solid dodgerblue;
+  transform-origin: bottom right;
+  transform: rotate(0deg) skew(45deg,0);
+    animation: spin 5s linear infinite,wavecolorchange 15s linear infinite ;
+    opacity:1;
+     -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+}
+
+.waveguideline {
+  /*background-image: linear-gradient(225deg, dodgerblue 15%, transparent 60%); */
+  background-color: rgba(0, 0, 0, 0) !important;
+  height: 200px;
+  width: 200px;
+  border-right: 2px solid dodgerblue;
+
+  transform-origin: bottom right;
+  transform: rotate(0deg) skew(45deg,0);
+    animation: spin 5s linear infinite,radarcolorchange 15s linear infinite ;
+position: absolute;
+margin-top: -200px;
+
+
+}
+.waveguide-spin{
+
+}
+.splash-title{
+  font-family: "Arial Black","Arial Bold",Gadget,sans-serif;
+  color: white;
+  font-size: 150px;
+  position: absolute;
+  z-index: 99;
+  left: 250px;
+  top: 200px;
+  display:none;
+    transition:   2.5s;
+}
+
+.grid {
+  border: 1px solid #ccc;
+  border-width: 1px 0 0 1px;
+  margin-top: -198px;
+  opacity: .5;
+  margin-left: -30px;
+}
+
+.grid div {
+    border: 1px solid #ccc;
+    border-width: 0 1px 1px 0;
+    float: left;
+    animation: radarcolorchange 15s linear infinite ;
+    margin-left: -1px;
+}
+.menuMode{
+
+  transform: scale(7) translate(-43px,-43px);
+  opacity: .2;
+}
+
+.scanMode{
+
+   transform: translate(250px,100px);
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg) skew(45deg,0);
+  }
+}
+
+
+@keyframes radarcolorchange
+{
+  0%   { /*lightblue*/
+
+    border-color: dodgerblue;
+
+  }
+  12.5% { /*teal */
+
+    border-color: #00f2b5;
+
+  }
+  25%  { /*green */
+
+  border-color: #15d600;
+
+  }
+  37.5% { /*yellow*/
+
+    border-color: #faff00;
+
+  }
+  50% { /*orange */
+
+  border-color: #e06c00;
+
+  }
+  62.5% { /*red */
+
+    border-color: #f20000;
+
+  }
+  75% { /*purple*/
+
+    border-color: #7800ce;
+
+  }
+  87.5% { /*blue */
+
+    border-color: #0037ff;
+
+  }
+  100% { /*blue */
+
+    border-color: dodgerblue;
+
+  }
+}
+
+   @keyframes wavecolorchange
+      {
+        0%   { /*lightblue*/
+
+          border-right: 3px solid dodgerblue;
+            background-color: dodgerblue;
+        }
+        12.5% { /*teal */
+
+          border-right: 3px solid #00f2b5;
+            background-color: #00f2b5;
+        }
+        25%  { /*green */
+
+          border-right: 3px solid #15d600;
+            background-color: #15d600;
+        }
+        37.5% { /*yellow*/
+
+          border-right: 3px solid #faff00;
+            background-color: #faff00;
+        }
+        50% { /*orange */
+
+          border-right: 3px solid #e06c00;
+            background-color: #e06c00;
+        }
+        62.5% { /*red */
+
+          border-right: 3px solid #f20000;
+            background-color: #f20000;
+        }
+        75% { /*purple*/
+
+          border-right: 3px solid #7800ce;
+            background-color: #7800ce;
+        }
+        87.5% { /*blue */
+
+          border-right: 3px solid #0037ff;
+            background-color: #0037ff;
+        }
+        100% { /*blue */
+
+          border-right: 3px solid dodgerblue;
+            background-color: dodgerblue;
+        }
+      }

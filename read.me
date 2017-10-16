@@ -1,0 +1,14 @@
+Here is the quick beacon finder app I made to test the beacons. 
+
+Just include everything in the JS folder as it is done in the the index file.
+
+I used the beaconlist.js file for the data this should be able to be swapped out for something else
+as long as there is a major key and an onFind() function to handle the beacon being found.
+
+To start the scanning call beaconFinder.initialize();
+To stop the scan call beaconFinder.stop();
+** note - always stop the scan before initializing it again.
+
+For the beacons I was settings the major values to 100, 200 , 300 etc.
+These correspond with locations 1 2 and 3.  You can change these to whatever you would like but by checking
+the major value we can reuse a single JSON data file.

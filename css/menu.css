@@ -1,0 +1,48 @@
+.menuTile{
+  border:1px solid red;
+  height:195px;
+  margin:5px;
+  padding:5px;
+}
+.mainmenu{
+  position: fixed;
+  top:50px;
+  display:none;
+}
+.menuDir{
+  color:white;
+  font-size:20px;
+  text-align:center;
+}
+.beaconFound{
+  color:white;
+  font-size:20px;
+  text-align:center;
+  color: white;
+font-size: 20px;
+text-align: center;
+z-index: 999999;
+/* margin-top: 100px; */
+position: absolute;
+/* margin: auto; */
+left: 50%;
+width: 300px;
+margin-left: -150px;
+margin-top: 200px;
+}
+.startScanBtn{
+
+text-decoration: none;
+width: 300px;
+
+color: white;
+font-size: 50PX;
+border: 2px solid white;
+padding: 20px;
+border-radius: 50px;
+/* margin: auto; */
+position: fixed;
+left: 50%;
+margin-left: -165px;
+top:400px;
+}

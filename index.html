@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+
+	<title>Estimote Beacon Example</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
+	<link href="css/splash.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/menu.css" rel="stylesheet">
+	<!-- REQUIRED FOR BEACONS -->
+	<script src="cordova.js"></script> <!-- Cordova not inculded in project -->
+
+	<script src="js/libs/evothings/evothings.js"></script>
+	<script src="js/libs/evothings/ui/ui.js"></script>
+	<script src="js/beaconFinder.js"></script>
+	<script src="js/beaconlist.js"></script>
+	<!-- END REQUIRED FOR BEACONS -->
+
+	<script src="js/libs/jquery/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+
+
+			createGrid(40);
+		});
+
+		function createGrid(size) {
+		    var ratioW = Math.floor(450/size),
+		        ratioH = Math.floor(450/size);
+
+		    var parent = $('<div />', {
+		        class: 'grid',
+		        width: ratioW  * size,
+		        height: ratioH  * size
+		    }).addClass('grid').appendTo('.radar');
+
+		    for (var i = 0; i < ratioH; i++) {
+		        for(var p = 0; p < ratioW; p++){
+		            $('<div />', {
+		                width: size - 1,
+		                height: size - 1
+		            }).appendTo(parent);
+		        }
+		    }
+		}
+		function setStop(){
+			$('.debutton1').text('STOP');
+			beaconFinder.initialize();
+			$('.debutton1').attr('onclick', 'setStart();');
+			$('#bt').text('');
+		}
+		function setStart(){
+			$('.debutton1').text('START');
+			beaconFinder.stop();
+			$('.debutton1').attr('onclick', 'setStop()');
+		}
+
+	</script>
+
+</head>
+
+<body>
+	<div class="statusBar"></div>
+
+
+
+<div class="splashScreen animated ">
+	<h1 class="splash-title animated ">Beacon Finder</h1>
+	<div class="radar radar_large scanMode">
+		<div class="waveguide waveguide-spin"></div>
+		<div class="waveguideline waveguide-spin"></div>
+	</div>
+</div>
+
+
+<h1 id="bt" class="beaconText"></h1>
+
+
+<a class="debutton1" onclick="setStop();">START</a>
+
+
+
+
+	<script src="js/beaconController.js"></script>
+
+
+</body>
+
+</html>
