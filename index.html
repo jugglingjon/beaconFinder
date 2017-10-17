@@ -1,106 +1,54 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<meta charset="utf-8" />
-
-	<title>Estimote Beacon Example</title>
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">	
-	<link href="css/index.css" rel="stylesheet">
-	<link href="css/splash.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">
-	<link href="css/menu.css" rel="stylesheet">
-
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
-
 <body>
-	<div class="statusBar"></div>
-
-
-
-<div class="splashScreen animated ">
-	<h1 class="splash-title animated ">Beacon Finder</h1>
-	<div class="radar radar_large scanMode">
-		<div class="waveguide waveguide-spin"></div>
-		<div class="waveguideline waveguide-spin"></div>
+	
+	<div class="screen screen-splash" style="display:block;">
+		<h1>Name of App</h1>
+		<h3><a href="#" class="nav-link" data-to="screen-mission">Tap to continue</a></h3>
 	</div>
-</div>
 
+	<div class="screen screen-mission">
+		<h1>Go to the site</h1>
+		<p>Excepteur dolore labore sint laborum ad eiusmod reprehenderit sint nisi laboris dolore dolore quis anim id dolore est et exercitation ut aliquip veniam consequat deserunt pariatur consectetur sunt ex officia.</p>
+		<p><a href="#" class="btn btn-primary btn-toSearch">I'm there</a></p>
+	</div>
 
-<h1 id="bt" class="beaconText"></h1>
+	<div class="screen screen-search">
+		<h1>Walk Around</h1>
+		<p>Excepteur dolore labore sint laborum ad eiusmod reprehenderit sint nisi laboris dolore dolore quis anim id dolore est et exercitation ut aliquip veniam consequat deserunt pariatur consectetur sunt ex officia.</p>
+		<a class="debutton1" class="btn-find btn btn-primary btn-trigger" onclick="setStop();">START</a>
+	</div>
 
+	<div class="screen screen-found">
+		
+	</div>
 
-<a class="debutton1" onclick="setStop();">START</a>
+	<div class="dynamic-modal"></div>
 
-<!-- REQUIRED FOR BEACONS -->
-<script src="cordova.js"></script> <!-- Cordova not inculded in project -->
+	<!-- REQUIRED FOR BEACONS -->
+	<script src="cordova.js"></script> <!-- Cordova not inculded in project -->
+	<script src="js/libs/evothings/evothings.js"></script>
+	<script src="js/libs/evothings/ui/ui.js"></script>
+	<script src="js/beaconFinder.js"></script>
+	<script src="js/beaconController.js"></script>
+	<!-- END REQUIRED FOR BEACONS -->
 
-<script src="js/libs/evothings/evothings.js"></script>
-<script src="js/libs/evothings/ui/ui.js"></script>
-<script src="js/beaconFinder.js"></script>
-<script src="js/beaconlist.js"></script>
-<script src="js/beaconController.js"></script>
-<!-- END REQUIRED FOR BEACONS -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/vendor/popper.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/vendor/mustache.min.js"></script>
 
-<script src="js/vendor/popper.min.js"></script>
-<script src="js/vendor/jquery-3.2.1.min.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/vendor/mustache.min.js"></script>
-
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
-
-	
-	
-<script>
-	$(document).ready(function() {
-
-
-		createGrid(40);
-	});
-
-	function createGrid(size) {
-	    var ratioW = Math.floor(450/size),
-	        ratioH = Math.floor(450/size);
-
-	    var parent = $('<div />', {
-	        class: 'grid',
-	        width: ratioW  * size,
-	        height: ratioH  * size
-	    }).addClass('grid').appendTo('.radar');
-
-	    for (var i = 0; i < ratioH; i++) {
-	        for(var p = 0; p < ratioW; p++){
-	            $('<div />', {
-	                width: size - 1,
-	                height: size - 1
-	            }).appendTo(parent);
-	        }
-	    }
-	}
-	function setStop(){
-		$('.debutton1').text('STOP');
-		beaconFinder.initialize();
-		$('.debutton1').attr('onclick', 'setStart();');
-		$('#bt').text('');
-	}
-	function setStart(){
-		$('.debutton1').text('START');
-		beaconFinder.stop();
-		$('.debutton1').attr('onclick', 'setStop()');
-	}
-
-</script>
-
-
-
-
-
-
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
 </body>
-
 </html>
