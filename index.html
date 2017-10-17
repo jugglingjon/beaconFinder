@@ -8,11 +8,6 @@
 	<title>Estimote Beacon Example</title>
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">	
-	<link href="css/index.css" rel="stylesheet">
-	<link href="css/splash.css" rel="stylesheet">
-	<link href="css/animate.css" rel="stylesheet">
-	<link href="css/menu.css" rel="stylesheet">
-
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -33,10 +28,7 @@
 	<div class="screen screen-search">
 		<h1>Walk Around</h1>
 		<p>Excepteur dolore labore sint laborum ad eiusmod reprehenderit sint nisi laboris dolore dolore quis anim id dolore est et exercitation ut aliquip veniam consequat deserunt pariatur consectetur sunt ex officia.</p>
-		<a href="#" class="btn-find btn btn-primary btn-trigger" data-id="100">Trigger iBeacon Popup 100</a>
-		<a href="#" class="btn-find btn btn-primary btn-trigger" data-id="200">Trigger iBeacon Popup 200</a>
-		<a href="#" class="btn-find btn btn-primary btn-trigger" data-id="300">Trigger iBeacon Popup 300</a>
-		<a class="debutton1" onclick="setStop();">START</a>
+		<a class="debutton1 btn btn-primary" onclick="setStop();">START</a>
 		<h1 id="bt" class="beaconText"></h1>
 	</div>
 
@@ -72,17 +64,17 @@
 	
 <script>
 
-	function setStop(){
-		$('.debutton1').text('STOP');
-		beaconFinder.initialize();
-		$('.debutton1').attr('onclick', 'setStart();');
-		$('#bt').text('');
-	}
-	function setStart(){
-		$('.debutton1').text('START');
-		beaconFinder.stop();
-		$('.debutton1').attr('onclick', 'setStop()');
-	}
+	// function setStop(){
+	// 	$('.debutton1').text('STOP');
+	// 	beaconFinder.initialize();
+	// 	$('.debutton1').attr('onclick', 'setStart();');
+	// 	$('#bt').text('');
+	// }
+	// function setStart(){
+	// 	$('.debutton1').text('START');
+	// 	beaconFinder.stop();
+	// 	$('.debutton1').attr('onclick', 'setStop()');
+	// }
 
 </script>
 

@@ -11,7 +11,8 @@ var beaconlist = [
       //what to do when beacon 1 is found
       alert('beacon 1 found');
       this.found = true;
-      setStart();
+      beaconFinder.stop();
+      $scanning=false;
     }
   },
   {
@@ -23,7 +24,8 @@ var beaconlist = [
       //what to do when beacon 2 is found
       alert('beacon 2 found');
       this.found = true;
-        setStart();
+      beaconFinder.stop();
+      $scanning=false;
     }
 
   },
@@ -36,7 +38,8 @@ var beaconlist = [
       //what to do when beacon 3 is found
       alert("beacon 3 found")
       this.found = true;
-        setStart();
+      beaconFinder.stop();
+      $scanning=false;
     }
   }
 ];

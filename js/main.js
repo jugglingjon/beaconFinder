@@ -4,7 +4,8 @@
 
 var $currentScreen='screen-splash',
 	$globalFadeTime=400,
-	$currentObject;
+	$currentObject,
+	$scanning=false;
 
 
 
@@ -301,8 +302,19 @@ $(document).ready(function(){
 	});
 
 	$('.btn-toSearch').click(function(){
-		beaconFinder.initialize;
 		changeScreen('screen-search');
+	});
+
+	$('.debutton1').click(function(){
+		if(!$scanning){
+			$('.debutton1').text('STOP');
+			beaconFinder.initialize();
+		}
+		else{
+			$('.debutton1').text('START');
+			beaconFinder.stop();
+		}
+		$scanning=!$scanning;
 	});
 
 });
