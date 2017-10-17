@@ -13,7 +13,7 @@ var $currentScreen='screen-splash',
 // 				^DATA
 // ====================================
 
-var beaconlist = [
+var beaconlistx = [
 {
 	"major":100,
 	"minors":[1,2],
