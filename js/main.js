@@ -13,55 +13,7 @@ var $currentScreen='screen-splash',
 // 				^DATA
 // ====================================
 
-var $OLDobjects={
-	100:{
-		"name": "CD",
-		"slug": "cd",
-		"id": 100,
-		"distractors":[
-			{
-				"name": "Pen",
-				"slug": "pen"
-			},
-			{
-				"name": "Wrench",
-				"slug": "wrench"
-			}
-		]
-	},
-	200:{
-		"name": "Envelope",
-		"slug": "envelope",
-		"id": 200,
-		"distractors":[
-			{
-				"name": "Knife",
-				"slug": "knife"
-			},
-			{
-				"name": "Calculator",
-				"slug": "calculator"
-			}
-		]
-	},
-	300:{
-		"name": "USB",
-		"slug": "usb",
-		"id": 300,
-		"distractors":[
-			{
-				"name": "Mouse",
-				"slug": "mouse"
-			},
-			{
-				"name": "Soda",
-				"slug": "soda"
-			}
-		]
-	}
-}
-
-var OLDbeaconlist = [
+var $beacons = [
 {
 	"major":100,
 	"minors":[1,2],
@@ -85,6 +37,8 @@ var OLDbeaconlist = [
 		alert('beacon 1 found');
 		this.found = true;
 		beaconFinder.stop();
+		$scanning=false;
+		$('.debutton1').text('START');
 	}
 },
 {
@@ -110,6 +64,8 @@ var OLDbeaconlist = [
 		alert('beacon 2 found');
 		this.found = true;
 		beaconFinder.stop();
+		$scanning=false;
+		$('.debutton1').text('START');
 	}
 },
 {
@@ -132,9 +88,11 @@ var OLDbeaconlist = [
 	],
 	"onFind":function(){
 		//what to do when beacon 3 is found
-		alert("beacon 3 found");
+		alert("beacon 3 found")
 		this.found = true;
 		beaconFinder.stop();
+		$scanning=false;
+		$('.debutton1').text('START');
 	}
 }
 ];

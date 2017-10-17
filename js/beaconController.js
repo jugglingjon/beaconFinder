@@ -4,7 +4,7 @@
  * these can be set to whatever. I was using 100, 200, and 300 for locations 1,2, and 3
  */
 var beaconController = {
-	beaconlist:beaconlist,
+	beaconlist:$beacons,
 	/**
 	 * Finds the beacon from the list and calls the onFind function
 	 */
