@@ -249,17 +249,7 @@ function evalTriggers(){
 // 				^EVENTS
 // ====================================
 
-function setStop(){
-	$('.debutton1').text('STOP');
-	beaconFinder.initialize();
-	$('.debutton1').attr('onclick', 'setStart();');
-	$('#bt').text('');
-}
-function setStart(){
-	$('.debutton1').text('START');
-	beaconFinder.stop();
-	$('.debutton1').attr('onclick', 'setStop()');
-}
+
 
 $(document).ready(function(){
 
