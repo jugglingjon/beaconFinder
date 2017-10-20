@@ -212,6 +212,23 @@ function evalTriggers(){
 
 $(document).ready(function(){
 
+	//Preload images
+	var images = new Array()
+	
+	function preload() {
+		for (i = 0; i < preload.arguments.length; i++) {
+			images[i] = new Image()
+			images[i].src = preload.arguments[i]
+		}
+	}
+	
+	preload(
+		"img/soldier1-thumb-highlight.png",
+		"img/soldier2-thumb-highlight.png",
+		"img/soldier1.png",
+		"img/soldier2.png"
+	);
+
 	//implement fastclick
 	FastClick.attach(document.body);
 
