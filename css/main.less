@@ -49,20 +49,469 @@ Examples:
     @randNum: @base + @min;
 }
 
+// ====================================
+//              ^Fonts
+// ====================================
+
+.custom-font(@family: arial, @weight: normal, @style: normal, @filename){
+    @font-face{
+        font-family: @family;
+        src:url('../fonts/@{filename}.ttf') format('truetype');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+
+.custom-font('Roboto',300,normal,'Roboto-Light');
+.custom-font('Roboto',normal,normal,'Roboto-Regular');
+.custom-font('Roboto',600,normal,'Roboto-Medium');
+.custom-font('Roboto',bold,normal,'Roboto-Bold');
+
+.custom-font('Roboto Condensed',300,normal,'RobotoCondensed-Light');
+.custom-font('Roboto Condensed',normal,normal,'RobotoCondensed-Regular');
+.custom-font('Roboto Condensed',bold,normal,'RobotoCondensed-Bold');
+
+.custom-font('Oswald',300,normal,'Oswald-Light');
+.custom-font('Oswald',normal,normal,'Oswald-Regular');
+.custom-font('Oswald',600,normal,'Oswald-Medium');
+.custom-font('Oswald',bold,normal,'Oswald-Bold');
+
+//weights
+@light: 300;
+@normal: normal;
+@semibold: 600;
+@bold: bold;
 
 // ====================================
-// 				Variables
+// 				^Variables
 // ====================================
 
 
+@highlight: #ffc700;
+
 // ====================================
-// 				General
+// 				^General
 // ====================================
+
+body,html{
+    width:100%;
+    height:100%;
+    font-family: 'Roboto';
+    font-size: 15px;
+    background-color:black;
+    color:white;
+}
+
+body{
+    -webkit-font-smoothing: antialiased;
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
 
 .screen{
 	display:none;
 }
 
+.view-full{
+    position: fixed;
+    left: 0;
+    top:0;
+    right:0;
+    bottom:0;
+}
+
+.btn-primary{
+    border-radius:0;
+    background: rgba(4,4,4,0.20);
+    border: 1px solid @highlight;
+    color: @highlight;
+    padding: 15px 27px;
+
+    font-family: Roboto;
+    font-weight:@semibold;
+    text-transform:uppercase;
+    font-size: 16px;
+    color: #FFC600;
+    letter-spacing: 1.14px;
+}
+
+.nav-link{
+    display:inline-block;
+}
 
 
+// ====================================
+//              ^General
+// ====================================
 
+.screen-splash{
+    background: url('../img/splash.jpg') no-repeat center center;
+    background-size: contain;
+
+    .row{
+        height: 768px;
+    }
+
+    h1{
+        font-family: Oswald;
+        font-size: 68px;
+        color: #FFFFFF;
+        letter-spacing: 28px;
+        text-transform:uppercase;
+    }
+
+    h2{
+        font-family: 'Roboto Condensed';
+        font-weight: @light;
+        font-size: 18px;
+        color: #D9D9D9;
+        letter-spacing: 0;
+        line-height: 23px;
+    }
+
+    h4{
+        position: fixed;
+        bottom:40px;
+        width:100%;
+        left:0;
+        text-align:center;
+
+        font-family: 'Roboto Condensed';
+        font-weight:normal;
+        font-size: 17px;
+        color: #696969;
+        letter-spacing: 2px;
+        line-height: 18px;
+        text-transform:uppercase;
+        
+    }
+}
+
+
+// ====================================
+//              ^Instructions
+// ====================================
+
+.screen-mission{
+    background: url('../img/soldier1.png') no-repeat center center;
+    background-size: contain;
+}
+
+.screen-objective{
+    background: url('../img/soldier2.png') no-repeat center center;
+    background-size: contain;
+}
+
+.instruction-pane{
+    position: absolute;
+    width:450px;
+    left:450px;
+    top:250px;
+
+    h3{
+        /* SEARCH OBJECTIVE: */
+        font-family: Roboto;
+        text-transform:uppercase;
+        font-weight:normal;
+        font-size: 14px;
+        color: #FFC700;
+        letter-spacing: 1.47px;
+    }
+
+    h1{
+        /* Headline here: */
+        font-family: Oswald;
+        font-weight:normal;
+        text-transform:uppercase;
+        font-size: 36px;
+        color: #EFEFEF;
+        letter-spacing: 2px;
+    }
+
+    p{
+        /* This is where the mi: */
+        font-family: 'Roboto Condensed';
+        font-weight:@light;
+        font-size: 18px;
+        color: #D9D9D9;
+        letter-spacing: 0;
+        line-height: 23px;
+    }
+
+    .btn{
+        margin-top: 30px;
+    }
+}
+
+// ====================================
+//              ^Search
+// ====================================
+
+.screen-search{
+    .mission-hint{
+        position: absolute;
+        top:35px;
+        left:65px;
+        width: 153px;
+        height: 130px;
+        
+        background: url('../img/soldier1-thumb.png') no-repeat top left;
+        background-size: contain;
+
+        &.open{
+            background-image: url('../img/soldier1-thumb-highlight.png');
+
+            .mission-hint-text{
+                display:block;
+            }
+        }
+
+        .mission-hint-text{
+            position: absolute;
+            display:none;
+            top: 100%;
+            left:20px;
+            margin-top: 30px;
+            padding: 18px;
+            width: 305px;
+
+
+            background: rgba(78,78,78,0.40);
+
+            h4{
+                font-family: 'Roboto';
+                font-weight: normal;
+                font-size: 14px;
+                color: #FFC600;
+                letter-spacing: 1.47px;
+                text-transform:uppercase;
+            }
+
+            hr{
+                margin: 8px 0;
+                border: 1px solid #656565;
+            }
+
+            p{
+                font-family: 'Roboto Condensed';
+                font-weight: @light;
+                font-size: 16px;
+                color: #D9D9D9;
+                letter-spacing: 0;
+                line-height: 21px;
+            }
+
+            &::after{
+                content:'';
+                position: absolute;
+                top:-23px;
+                left: 30px;
+                border-left: 22px solid transparent;
+                border-right: 22px solid transparent;
+                  
+                border-bottom: 23px solid rgba(78, 78, 78, 0.4);
+
+            }
+        }
+
+        
+        &.right{
+            left: auto;
+            right: 65px;
+            background-image: url('../img/soldier2-thumb.png');
+
+            &.open{
+                background-image: url('../img/soldier2-thumb-highlight.png');
+
+                .mission-hint-text{
+                    display:block;
+                }
+            }
+           
+           .mission-hint-text{
+                left:auto;
+                right:36px;
+
+                h4,p{
+                    text-align:right;
+                }
+
+                &::after{
+                    left:auto;
+                    right:30px;
+                }
+
+
+           }
+
+        }
+    }
+
+    .timer{
+        //background:green;
+        position: absolute;
+        top:30px;
+        width: 100%;
+        text-align:center;
+
+        h4{
+            margin-bottom: 4px;
+
+            font-family: 'Roboto Condensed';
+            font-weight: regular;
+            text-transform:uppercase;
+            font-size: 16px;
+            color: #696969;
+            letter-spacing: 1px;
+            line-height: 18px;
+        }
+
+        hr{
+            height: 6px;
+            margin: 6px 0 0 0;
+            width: 100%;
+            background: url('../img/hr.png') no-repeat center center;
+            background-size:cover;
+        }
+
+        .timer-time{
+            text-align: center;
+            font-family: Oswald;
+            font-style: normal;
+            font-size: 40px;
+            color: #EFEFEF;
+            letter-spacing: 0;
+        }
+
+    }
+    .debug{
+        display:none;
+    }
+
+    .items-found{
+        position: absolute;
+        //background:blue;
+        bottom:0px;
+        width: 100%;
+        text-align:center;
+
+        h4{
+            padding: 7px 0;
+            margin-bottom: 12px;
+            opacity: 1;
+            background-image: linear-gradient(-90deg, rgba(4,4,4,0.00) 4%, #040404 51%, rgba(4,4,4,0.00) 100%);
+
+            font-family: Oswald;
+            font-weight: normal;
+            font-size: 18px;
+            color: #EFEFEF;
+            letter-spacing: 1px;
+            text-transform:uppercase;
+        }
+
+        .items-found-list{
+            height: 200px;
+            text-align:center;
+
+            .items-found-item{
+                display:inline-block;
+                height: 188px;
+                width: 200px;
+                margin: 0 20px;
+
+                background: url('../img/item-blank.png') no-repeat left top;
+                background-size: contain;
+
+            }
+        }
+    }
+
+    .pulse{
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        top:0;
+        height:200px;
+        width:200px;
+        margin: auto;
+
+        @keyframes radar {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            25%{
+                opacity:1;
+            }
+            75%{
+                opacity: 1;
+                filter:blur(0px);
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+                filter:blur(10px);
+            }
+        }
+
+        @keyframes radarx {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            25% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            75% {
+                transform: scale(1.5);
+                opacity: 0.5;
+                filter: blur(0px);
+            }
+            100% {
+                transform: scale(2);
+                opacity: 0;
+                filter: blur(20px);
+            }
+        }
+
+        .pulse-wave{
+            border-radius: 50%;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #33cc33;
+            border-radius: 50%;
+            opacity: 0;
+            animation: radar 5s infinite linear;
+            border: 8px solid @highlight;
+
+            &:nth-child(1){
+                animation-delay: 0s;
+            }
+
+            &:nth-child(2){
+                animation-delay: 1s;
+            }
+
+            &:nth-child(3){
+                animation-delay: 2s;
+            }
+
+            &:nth-child(4){
+                animation-delay: 3s;
+            }
+
+            &:nth-child(5){
+                animation-delay: 4s;
+            }
+        }
+    }
+}

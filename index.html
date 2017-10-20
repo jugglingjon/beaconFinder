@@ -14,22 +14,83 @@
 
 <body>
 
-	<div class="screen screen-splash" style="display:block;">
-		<h1>Name of App</h1>
-		<h3><a href="#" class="nav-link" data-to="screen-mission">Tap to continue</a></h3>
+	<div class="screen screen-splash view-full" style="display:block;">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-12 text-center">
+					<h1>Namehere</h1>
+					<h2>Short intro or tagline here</h2>
+					<h4>Tap Screen to Begin Mission</h4>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 
-	<div class="screen screen-mission">
-		<h1>Go to the site</h1>
-		<p>Excepteur dolore labore sint laborum ad eiusmod reprehenderit sint nisi laboris dolore dolore quis anim id dolore est et exercitation ut aliquip veniam consequat deserunt pariatur consectetur sunt ex officia.</p>
-		<p><a href="#" class="btn btn-primary btn-toSearch">I'm there</a></p>
+	<div class="screen screen-mission view-full">
+		<div class="instruction-pane">
+			<h3>Mission</h3>
+			<h1>Headline Here</h1>
+			<p>Excepteur dolore labore sint laborum ad eiusmod reprehenderit sint nisi laboris dolore dolore quis anim id dolore est et exercitation ut aliquip veniam consequat deserunt pariatur consectetur sunt ex officia.</p>
+			<p><a href="#" class="btn btn-primary nav-link" data-to="screen-objective">Meet Search Team</a></p>
+		</div>
 	</div>
 
-	<div class="screen screen-search">
-		<h1>Walk Around</h1>
-		<p>Excepteur dolore labore sint laborum ad eiusmod reprehenderit sint nisi laboris dolore dolore quis anim id dolore est et exercitation ut aliquip veniam consequat deserunt pariatur consectetur sunt ex officia.</p>
-		<a class="debutton1 btn btn-primary" onclick="setStop();">START</a>
-		<h1 id="bt" class="beaconText"></h1>
+	<div class="screen screen-objective view-full">
+		<div class="instruction-pane">
+			<h3>Search Objective</h3>
+			<h1>Headline Here</h1>
+			<p>Excepteur dolore labore sint laborum ad eiusmod reprehenderit sint nisi laboris dolore dolore quis anim id dolore est et exercitation ut aliquip veniam consequat deserunt pariatur consectetur sunt ex officia.</p>
+			<p><a href="#" class="btn btn-primary btn-toSearch">Begin Search</a></p>
+		</div>
+	</div>
+
+	<div class="screen screen-search view-full">
+		<div class="pulse">
+			<div class="pulse-wave"></div>
+			<div class="pulse-wave"></div>
+			<div class="pulse-wave"></div>
+			<div class="pulse-wave"></div>
+			<div class="pulse-wave"></div>
+		</div>
+		<div class="debug">
+			<a class="debutton1 btn btn-primary" onclick="setStop();">START</a>
+			<h1 id="bt" class="beaconText"></h1>
+		</div>
+
+		<div class="timer">
+			<h4>Time Remaining</h4>
+			<hr>
+			<div class="timer-time">10:00</div>
+		</div>
+
+		<div class="mission-hint">
+			<div class="mission-hint-text">
+				<h4>Mission</h4>
+				<hr>
+				<p>Lorem ipsum reprehenderit sit dolore eiusmod ea enim dolore consequat reprehenderit proident dolor do.</p>
+			</div>
+		</div>
+
+		<div class="mission-hint right">
+			<div class="mission-hint-text">
+				<h4>Mission</h4>
+				<hr>
+				<p>In nostrud dolor aute in non in voluptate elit commodo nisi aliquip aliquip exercitation ut pariatur.</p>
+			</div>
+		</div>
+
+		<div class="items-found">
+			<h4>Exploitable Items Found (<span class="items-found-count">0</span>/3)</h4>
+			<div class="items-found-list">
+				<div class="items-found-item"></div>
+				<div class="items-found-item"></div>
+				<div class="items-found-item"></div>
+			</div>
+		</div>
+
+		
+		
 	</div>
 
 	<div class="screen screen-found">
@@ -57,6 +118,7 @@
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/vendor/mustache.min.js"></script>
 
+<script src="js/fastclick.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
