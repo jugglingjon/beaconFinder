@@ -147,7 +147,24 @@ function end(success){
 // 				^EVENTS
 // ====================================
 
+function foundBeacon(foundID){
+	beaconFinder.stop();
+	$scanning=false;
+	$('.found-options').empty();
 
+	$.each(beaconlist,function(index){
+		if(this.id==foundID){
+			$.get('template-found.html',function(template){
+				//console.log(template);
+				var rendered=Mustache.render(template,beaconlist[index]);
+				$('.search-found').empty().html(rendered);
+				$('.found-options').randomize('.found-option');
+			});
+			return false;
+		}
+	});
+	fadeSwitch('.search-searching','.search-alert');
+}
 
 $(document).ready(function(){
 
@@ -179,7 +196,9 @@ $(document).ready(function(){
 
 	//from objective to search
 	$('.btn-toSearch').click(function(){
-		changeScreen('screen-search');
+		changeScreen('screen-search',{after:function(){
+			beaconFinder.initialize();
+		}});
 	});
 
 	//stop/start scan
@@ -205,7 +224,7 @@ $(document).ready(function(){
 		$(this).toggleClass('open');
 	});
 
-	//opens found panes
+	//trigger item find, go to alert, populate quiz template
 	$('.items-found-item').click(function(){
 		var foundID=$(this).attr('data-id');
 
@@ -273,6 +292,9 @@ $(document).ready(function(){
 	$('.btn-restart').click(function(){
 		changeScreen('screen-splash',{before:function(){
 			$('.items-found-item').removeClass('found');
+			$.each(beaconlist,function(){
+				this.found=false;
+			});
 		}});
 	});
 

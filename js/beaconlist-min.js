@@ -26,9 +26,7 @@ var beaconlist = [
     //what to do when beacon 1 is found
     alert('beacon 1 found');
     this.found = true;
-    beaconFinder.stop();
-    $scanning=false;
-    $('.debutton1').text('START');
+    foundBeacon(this.id);
   }
 },
 {
