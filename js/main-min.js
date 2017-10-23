@@ -281,6 +281,9 @@ $(document).ready(function(){
 
 		$('.items-found-item').eq(foundIndex).addClass('found');
 		fadeSwitch('.search-found','.search-searching');
+		setTimeout(function(){
+			beaconFinder.initialize();
+		},$globalFadeTime);
 
 		if($('.items-found-item.found').length==beaconlist.length){
 			end(true);
