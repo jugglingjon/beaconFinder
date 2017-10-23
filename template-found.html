@@ -1,13 +1,21 @@
-<h1>What did you find?</h1>
-<div class="container">
-	<div class="row found-options">
-		<div class="col-md-4 text-center found-option">
-			<a href="#" class="btn btn-primary correct">{{name}}</a>
-		</div>
-		{{#distractors}}
-		<div class="col-md-4 text-center found-option">
-			<a href="#" class="btn btn-primary">{{name}}</a>
-		</div>
-		{{/distractors}}
-	</div>
+<div class="found-before">
+	<h1>What did you find?</h1>
+	<h2>Text to go here explaining that they should collect evidence that aligns to the search oobjective.</h2>
 </div>
+<div class="found-after" style="display:none;">
+	<h1 class="found-correct"></h1>
+	<h2 class="found-response">{{response}}</h2>
+</div>
+<div class="found-options row">
+	<div class="found-option col-4 correct">
+		<img src="img/{{slug}}.png">
+		<a href="#" class="btn btn-primary" data-index="{{ind}}">Collect</a>
+	</div>
+	{{#distractors}}
+	<div class="found-option col-4">
+		<img src="img/{{slug}}.png">
+		<a href="#" class="btn btn-primary" data-index="{{ind}}">Collect</a>
+	</div>
+	{{/distractors}}
+</div>
+<a href="#" class="btn btn-primary btn-continue" style="display:none;" data-index="{{ind}}">Continue Search</a>

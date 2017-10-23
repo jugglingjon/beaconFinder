@@ -277,6 +277,22 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/caution.png": {
+		"ft": 32768,
+		"iS": 117493,
+		"oA": 0,
+		"oAP": "\/img\/caution.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/img\/found-frame.png": {
+		"ft": 32768,
+		"iS": 79913,
+		"oA": 0,
+		"oAP": "\/img\/found-frame.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/hr.png": {
 		"ft": 32768,
 		"iS": 5091,
@@ -290,6 +306,38 @@
 		"iS": 58362,
 		"oA": 0,
 		"oAP": "\/img\/item-blank.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/img\/papers-frame.png": {
+		"ft": 32768,
+		"iS": 208244,
+		"oA": 0,
+		"oAP": "\/img\/papers-frame.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/papers.png": {
+		"ft": 32768,
+		"iS": 190421,
+		"oA": 0,
+		"oAP": "\/img\/papers.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/phone-frame.png": {
+		"ft": 32768,
+		"iS": 220171,
+		"oA": 0,
+		"oAP": "\/img\/phone-frame.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/phone.png": {
+		"ft": 32768,
+		"iS": 318755,
+		"oA": 0,
+		"oAP": "\/img\/phone.png",
 		"oF": 0,
 		"opt": 1
 		},
@@ -349,6 +397,14 @@
 		"oF": 0,
 		"opt": 0
 		},
+	"\/img\/vhs.png": {
+		"ft": 32768,
+		"iS": 257055,
+		"oA": 0,
+		"oAP": "\/img\/vhs.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -369,6 +425,15 @@
 		"mi": 0,
 		"oA": 0,
 		"oAP": "\/js\/beaconFinder-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/beaconlist-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/beaconlist-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -454,7 +519,7 @@
 		"oA": 0,
 		"oAP": "\/js\/main-min.js",
 		"oF": 0,
-		"sC": 1,
+		"sC": 0,
 		"tS": 0
 		},
 	"\/js\/plugins.js": {

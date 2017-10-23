@@ -13,89 +13,6 @@ var $currentScreen='screen-splash',
 // 				^DATA
 // ====================================
 
-var beaconlistx = [
-{
-	"major":100,
-	"minors":[1,2],
-	"text":'You found location 1.',
-	"found":false,
-	"name": "CD",
-	"slug": "cd",
-	"id": 100,
-	"distractors":[
-		{
-			"name": "Pen",
-			"slug": "pen"
-		},
-		{
-			"name": "Wrench",
-			"slug": "wrench"
-		}
-	],
-	"onFind":function(){
-		//what to do when beacon 1 is found
-		alert('beacon 1 found');
-		this.found = true;
-		beaconFinder.stop();
-		$scanning=false;
-		$('.debutton1').text('START');
-	}
-},
-{
-	"major":200,
-	"minors":[1,2],
-	"text":'You found location 2.',
-	"found":false,
-	"name": "Envelope",
-	"slug": "envelope",
-	"id": 200,
-	"distractors":[
-		{
-			"name": "Knife",
-			"slug": "knife"
-		},
-		{
-			"name": "Calculator",
-			"slug": "calculator"
-		}
-	],
-	"onFind":function(){
-		//what to do when beacon 2 is found
-		alert('beacon 2 found');
-		this.found = true;
-		beaconFinder.stop();
-		$scanning=false;
-		$('.debutton1').text('START');
-	}
-},
-{
-	"major":300,
-	"minors":[1,2],
-	"text":'You found location 3.',
-	"found":false,
-	"name": "USB",
-	"slug": "usb",
-	"id": 300,
-	"distractors":[
-		{
-			"name": "Mouse",
-			"slug": "mouse"
-		},
-		{
-			"name": "Soda",
-			"slug": "soda"
-		}
-	],
-	"onFind":function(){
-		//what to do when beacon 3 is found
-		alert("beacon 3 found")
-		this.found = true;
-		beaconFinder.stop();
-		$scanning=false;
-		$('.debutton1').text('START');
-	}
-}
-];
 
 // ====================================
 // 				^UTILITIES
@@ -186,6 +103,12 @@ function changeScreen(screenClass, callbackObj){
 	});
 }
 
+function fadeSwitch(current,to){
+	$(current).fadeOut($globalFadeTime, function(){
+		$(to).fadeIn($globalFadeTime);
+	});
+}
+
 
 // ====================================
 // 				^BEACONS
@@ -203,6 +126,22 @@ function evalTriggers(){
 	}
 }
 
+
+// ====================================
+// 				^END
+// ====================================
+
+function end(success){
+	$('.end-list').empty().append($('.items-found-list').clone());
+	if(success){
+		$('.end-state').text('Mission Complete!');
+		$('.end-feedback').text('You did it!');
+	}
+	else{
+		$('.end-state').text('Time\'s Up!');
+		$('.end-feedback').text('Go faster next time!');
+	}
+}
 
 // ====================================
 // 				^EVENTS
@@ -238,48 +177,6 @@ $(document).ready(function(){
 		return false;
 	});
 
-	//simulates ibeacon trigger
-	$('.btn-trigger').click(function(){
-		$currentObject=$(this).attr('data-id');
-
-		$.get('template-foundModal.html',function(template){
-			//console.log(template);
-			var rendered=Mustache.render(template,{"id":$currentObject});
-			$('.dynamic-modal').empty().html(rendered);
-			$('#modal-found').modal();
-		});
-		
-		return false;
-	});
-
-	//opens 'found' screen, renders options
-	$('body').on('click','.btn-found',function(){
-		$('#modal-found').modal('hide');
-
-		$.get('template-found.html',function(template){
-			var rendered=Mustache.render(template,$objects[$currentObject]);
-			$('.screen-found').empty().html(rendered);
-			$('.found-options').randomize('.found-option');
-			changeScreen('screen-found');
-		});
-
-		return false;
-	});
-
-	
-	$('body').on('click','.found-option a',function(){
-		if($(this).hasClass('correct')){
-			alert('Correct');
-		}
-		else{
-			alert('Incorrect');
-		}
-		$objects[$currentObject].found=true;
-		evalTriggers();
-		changeScreen('screen-search');
-		return false;
-	});
-
 	//from objective to search
 	$('.btn-toSearch').click(function(){
 		changeScreen('screen-search');
@@ -306,6 +203,77 @@ $(document).ready(function(){
 	//opens hint panes
 	$('.mission-hint').click(function(){
 		$(this).toggleClass('open');
+	});
+
+	//opens found panes
+	$('.items-found-item').click(function(){
+		var foundID=$(this).attr('data-id');
+
+
+		$('.found-options').empty();
+
+		$.each(beaconlist,function(index){
+			if(this.id==foundID){
+				$.get('template-found.html',function(template){
+					//console.log(template);
+					var rendered=Mustache.render(template,beaconlist[index]);
+					$('.search-found').empty().html(rendered);
+					$('.found-options').randomize('.found-option');
+				});
+				return false;
+			}
+		});
+		fadeSwitch('.search-searching','.search-alert');
+	});
+
+	//from alert to found quiz
+	$('.search-alert .btn').click(function(){
+		fadeSwitch('.search-alert','.search-found');
+	});
+
+	//answer found quiz
+	$('body').on('click','.found-option a',function(){
+		var el=$(this);
+		$('.found-options').addClass('selected');
+
+		var fadeCount=$('.found-options a').length;
+
+		$('.found-options a').off('click').fadeOut($globalFadeTime,function(){
+			if(--fadeCount>0) return;
+			$('.btn-continue').fadeIn($globalFadeTime);
+		});
+
+		$('.found-before').fadeOut($globalFadeTime,function(){
+			if(el.closest('.found-option').hasClass('correct')){
+				$('.found-correct').text('Correct');
+			}
+			else{
+				$('.found-correct').text('Incorrect');
+			}
+			$('.found-response').text(beaconlist[el.attr('data-index')].response);
+			$('.found-after').fadeIn($globalFadeTime);
+		});
+		
+	});
+
+	//continue to search or end
+	$('body').on('click','.btn-continue',function(){
+		var foundIndex=$(this).attr('data-index');
+
+		$('.items-found-item').eq(foundIndex).addClass('found');
+		fadeSwitch('.search-found','.search-searching');
+
+		if($('.items-found-item.found').length==beaconlist.length){
+			end(true);
+			changeScreen('screen-end');
+		}
+	});
+
+	//restart game
+	$('.btn-restart').click(function(){
+		changeScreen('screen-splash',{before:function(){
+			$('.items-found-item').removeClass('found');
+		}});
 	});
 
 });

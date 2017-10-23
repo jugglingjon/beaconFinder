@@ -44,15 +44,9 @@
 			<p><a href="#" class="btn btn-primary btn-toSearch">Begin Search</a></p>
 		</div>
 	</div>
-
+	
 	<div class="screen screen-search view-full">
-		<div class="pulse">
-			<div class="pulse-wave"></div>
-			<div class="pulse-wave"></div>
-			<div class="pulse-wave"></div>
-			<div class="pulse-wave"></div>
-			<div class="pulse-wave"></div>
-		</div>
+		
 		<div class="debug">
 			<a class="debutton1 btn btn-primary" onclick="setStop();">START</a>
 			<h1 id="bt" class="beaconText"></h1>
@@ -64,43 +58,71 @@
 			<div class="timer-time">10:00</div>
 		</div>
 
-		<div class="mission-hint">
-			<div class="mission-hint-text">
-				<h4>Mission</h4>
-				<hr>
-				<p>Lorem ipsum reprehenderit sit dolore eiusmod ea enim dolore consequat reprehenderit proident dolor do.</p>
+		<div class="search-searching">
+			<div class="pulse">
+				<div class="pulse-wave"></div>
+				<div class="pulse-wave"></div>
+				<div class="pulse-wave"></div>
+				<div class="pulse-wave"></div>
+				<div class="pulse-wave"></div>
+			</div>
+			<div class="mission-hint">
+				<div class="mission-hint-text">
+					<h4>Mission</h4>
+					<hr>
+					<p>Lorem ipsum reprehenderit sit dolore eiusmod ea enim dolore consequat reprehenderit proident dolor do.</p>
+				</div>
+			</div>
+
+			<div class="mission-hint right">
+				<div class="mission-hint-text">
+					<h4>Mission</h4>
+					<hr>
+					<p>In nostrud dolor aute in non in voluptate elit commodo nisi aliquip aliquip exercitation ut pariatur.</p>
+				</div>
+			</div>
+
+			<div class="items-found">
+				<h4>Exploitable Items Found (<span class="items-found-count">0</span>/3)</h4>
+				<div class="items-found-list">
+					<div class="items-found-item" data-id="100"><img src="img/phone.png"></div>
+					<div class="items-found-item" data-id="200"><img src="img/vhs.png"></div>
+					<div class="items-found-item" data-id="300"><img src="img/papers.png"></div>
+				</div>
 			</div>
 		</div>
-
-		<div class="mission-hint right">
-			<div class="mission-hint-text">
-				<h4>Mission</h4>
-				<hr>
-				<p>In nostrud dolor aute in non in voluptate elit commodo nisi aliquip aliquip exercitation ut pariatur.</p>
+		<div class="search-alert" style="display:none;">
+			<div class="search-alert-content">
+				<img src="img/caution.png">
+				<h2>You're Getting Close!</h2>
+				<h3>Notification alert to appear when they are close to an evidence zone.</h3>
+				<a href="#" class="btn btn-primary">I Found Evidence</a>
 			</div>
+
+			<p class="hint"><span>HINT:</span> A hint could go here to give the student more context about where they should be looking, like in a fake wall.</p>
 		</div>
 
-		<div class="items-found">
-			<h4>Exploitable Items Found (<span class="items-found-count">0</span>/3)</h4>
-			<div class="items-found-list">
-				<div class="items-found-item"></div>
-				<div class="items-found-item"></div>
-				<div class="items-found-item"></div>
-			</div>
+		<div class="search-found" style="display:none;">
+
 		</div>
 
 		
 		
 	</div>
 
-	<div class="screen screen-found">
-		
+	<div class="screen screen-end view-full">
+		<div class="end-content">
+			<h1 class="end-state"></h1>
+			<h4 class="end-feedback"></h4>
+
+			<div class="end-list">
+
+			</div>
+			<a href="#" class="btn btn-primary btn-restart">End Mission</a>
+		</div>
 	</div>
 
 	<div class="dynamic-modal"></div>
-
-
-
 
 
 <!-- REQUIRED FOR BEACONS -->

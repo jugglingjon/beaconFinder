@@ -229,6 +229,35 @@ body {
 .instruction-pane .btn {
   margin-top: 30px;
 }
+.items-found-list {
+  height: 200px;
+  text-align: center;
+}
+.items-found-list .items-found-item {
+  display: inline-block;
+  position: relative;
+  height: 188px;
+  width: 200px;
+  margin: 0 20px;
+  background: url('../img/item-blank.png') no-repeat left top;
+  background-size: contain;
+}
+.items-found-list .items-found-item img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 22px auto 0 auto;
+  display: none;
+  filter: drop-shadow(0px 0px 40px #ffc700);
+  max-width: 80%;
+  max-height: 100px;
+}
+.items-found-list .items-found-item.found {
+  background-image: url('../img/found-frame.png');
+}
+.items-found-list .items-found-item.found img {
+  display: block;
+}
 .screen-search .mission-hint {
   position: absolute;
   top: 35px;
@@ -364,11 +393,28 @@ body {
 }
 .screen-search .items-found .items-found-list .items-found-item {
   display: inline-block;
+  position: relative;
   height: 188px;
   width: 200px;
   margin: 0 20px;
   background: url('../img/item-blank.png') no-repeat left top;
   background-size: contain;
+}
+.screen-search .items-found .items-found-list .items-found-item img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 22px auto 0 auto;
+  display: none;
+  filter: drop-shadow(0px 0px 40px #ffc700);
+  max-width: 80%;
+  max-height: 100px;
+}
+.screen-search .items-found .items-found-list .items-found-item.found {
+  background-image: url('../img/found-frame.png');
+}
+.screen-search .items-found .items-found-list .items-found-item.found img {
+  display: block;
 }
 .screen-search .pulse {
   position: absolute;
@@ -446,5 +492,112 @@ body {
 }
 .screen-search .pulse .pulse-wave:nth-child(5) {
   animation-delay: 4s;
+}
+.screen-search .search-alert .search-alert-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 210px;
+  text-align: center;
+}
+.screen-search .search-alert .search-alert-content img {
+  width: 218px;
+}
+.screen-search .search-alert h2 {
+  font-family: Oswald;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #EFEFEF;
+  letter-spacing: 2px;
+}
+.screen-search .search-alert h3 {
+  margin-bottom: 30px;
+  font-family: 'Roboto Condensed';
+  font-size: 18px;
+  color: #D9D9D9;
+  letter-spacing: 0;
+  line-height: 23px;
+}
+.screen-search .search-alert p {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  /* int could go here to: */
+  font-family: 'Roboto Condensed';
+  font-size: 14px;
+  color: #C4C4C4;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+.screen-search .search-alert p span {
+  font-family: 'Roboto Condensed';
+  font-weight: bold;
+  color: #FFC700;
+}
+.screen-search .search-found {
+  position: absolute;
+  width: 900px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 200px;
+  text-align: center;
+}
+.screen-search .search-found h1 {
+  font-family: Oswald;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #EFEFEF;
+  letter-spacing: 2px;
+}
+.screen-search .search-found h2 {
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+  font-size: 18px;
+  color: #D9D9D9;
+  letter-spacing: 0;
+  line-height: 23px;
+}
+.screen-search .search-found .found-options {
+  margin: 0 auto;
+  left: 0;
+}
+.screen-search .search-found .found-options .found-option img {
+  max-width: 70%;
+  margin: 40px 0;
+  filter: drop-shadow(0px 0px 30px black);
+  transition: 0.3s ease-out all;
+}
+.screen-search .search-found .found-options.selected .found-option img {
+  opacity: .5;
+}
+.screen-search .search-found .found-options.selected .found-option.correct img {
+  filter: drop-shadow(0px 0px 40px #ffc700);
+  opacity: 1;
+}
+.screen-end .end-content {
+  margin-top: 200px;
+  text-align: center;
+}
+.screen-end .end-content h1 {
+  font-family: 'Oswald';
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 36px;
+  color: #EFEFEF;
+  letter-spacing: 2px;
+}
+.screen-end .end-content h4 {
+  margin-bottom: 40px;
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+  font-size: 18px;
+  color: #D9D9D9;
+  letter-spacing: 0;
+  line-height: 23px;
 }
 /*# sourceMappingURL=main.css.map */
