@@ -153,7 +153,7 @@ function foundBeacon(foundID){
 	$('.found-options').empty();
 
 	$.each(beaconlist,function(index){
-		if(this.id==foundID){
+		if(this.id==foundID && !this.found){
 			$.get('template-found.html',function(template){
 				//console.log(template);
 				var rendered=Mustache.render(template,beaconlist[index]);
@@ -225,25 +225,25 @@ $(document).ready(function(){
 	});
 
 	//trigger item find, go to alert, populate quiz template
-	$('.items-found-item').click(function(){
-		var foundID=$(this).attr('data-id');
+	// $('.items-found-item').click(function(){
+	// 	var foundID=$(this).attr('data-id');
 
 
-		$('.found-options').empty();
+	// 	$('.found-options').empty();
 
-		$.each(beaconlist,function(index){
-			if(this.id==foundID){
-				$.get('template-found.html',function(template){
-					//console.log(template);
-					var rendered=Mustache.render(template,beaconlist[index]);
-					$('.search-found').empty().html(rendered);
-					$('.found-options').randomize('.found-option');
-				});
-				return false;
-			}
-		});
-		fadeSwitch('.search-searching','.search-alert');
-	});
+	// 	$.each(beaconlist,function(index){
+	// 		if(this.id==foundID){
+	// 			$.get('template-found.html',function(template){
+	// 				//console.log(template);
+	// 				var rendered=Mustache.render(template,beaconlist[index]);
+	// 				$('.search-found').empty().html(rendered);
+	// 				$('.found-options').randomize('.found-option');
+	// 			});
+	// 			return false;
+	// 		}
+	// 	});
+	// 	fadeSwitch('.search-searching','.search-alert');
+	// });
 
 	//from alert to found quiz
 	$('.search-alert .btn').click(function(){
