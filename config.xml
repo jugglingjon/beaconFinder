@@ -14,4 +14,8 @@
     <access origin="*" />
     <preference name="DisallowOverscroll" value="true" />
 	<plugin spec="https://github.com/evothings/phonegap-estimotebeacons.git" source="git" />
+
+    <platform name="ios" >
+        <preference name="orientation" value="landscape" />
+    </platform>
 </widget>
