@@ -24,7 +24,6 @@ var beaconlist = [
   "ind":0,
   "onFind":function(){
     //what to do when beacon 1 is found
-    alert('beacon 1 found');
     this.found = true;
     foundBeacon(this.id);
   }
@@ -51,11 +50,8 @@ var beaconlist = [
   "ind":1,
   "onFind":function(){
     //what to do when beacon 2 is found
-    alert('beacon 2 found');
     this.found = true;
-    beaconFinder.stop();
-    $scanning=false;
-    $('.debutton1').text('START');
+    foundBeacon(this.id);
   }
 },
 {
@@ -80,11 +76,8 @@ var beaconlist = [
   "ind":2,
   "onFind":function(){
     //what to do when beacon 3 is found
-    alert("beacon 3 found")
     this.found = true;
-    beaconFinder.stop();
-    $scanning=false;
-    $('.debutton1').text('START');
+    foundBeacon(this.id);
   }
 }
 ];
