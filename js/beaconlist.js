@@ -24,8 +24,10 @@ var beaconlist = [
   "ind":0,
   "onFind":function(){
     //what to do when beacon 1 is found
-    this.found = true;
-    foundBeacon(this.id);
+    if(!this.found){
+      this.found = true;
+      foundBeacon(this.id);
+    }
   }
 },
 {
@@ -50,8 +52,10 @@ var beaconlist = [
   "ind":1,
   "onFind":function(){
     //what to do when beacon 2 is found
-    this.found = true;
-    foundBeacon(this.id);
+    if(!this.found){
+      this.found = true;
+      foundBeacon(this.id);
+    }
   }
 },
 {
@@ -76,8 +80,10 @@ var beaconlist = [
   "ind":2,
   "onFind":function(){
     //what to do when beacon 3 is found
-    this.found = true;
-    foundBeacon(this.id);
+    if(!this.found){
+      this.found = true;
+      foundBeacon(this.id);
+    }
   }
 }
 ];
