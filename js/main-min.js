@@ -298,6 +298,7 @@ $(document).ready(function(){
 			$.each(beaconlist,function(){
 				this.found=false;
 			});
+			beaconFinder.foundBeacons=[];
 		}});
 	});
 
