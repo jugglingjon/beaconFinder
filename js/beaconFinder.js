@@ -82,7 +82,7 @@ var beaconFinder = (function() {
     $.each(beacons, function(key, beacon) {
       console.log(beacon);
 
-      if (beacon.distance <= 3) {
+      if (beacon.distance <= 3 && beacon.major<=300) {
 
         beaconController.handleBeaconFound(beacon);
 
