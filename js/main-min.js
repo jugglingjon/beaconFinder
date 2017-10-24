@@ -155,7 +155,7 @@ function foundBeacon(foundID){
 
 	$.each(beaconlist,function(index){
 		if(this.id==foundID){
-			beaconFinder.foundBeacons.push(this.major);
+			$foundBeacons.push(this.major);
 			$.get('template-found.html',function(template){
 				//console.log(template);
 				var rendered=Mustache.render(template,beaconlist[index]);
@@ -300,7 +300,7 @@ $(document).ready(function(){
 			$.each(beaconlist,function(){
 				this.found=false;
 			});
-			beaconFinder.foundBeacons=[];
+			$foundBeacons=[];
 		}});
 	});
 
