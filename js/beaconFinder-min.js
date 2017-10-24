@@ -85,7 +85,6 @@ var beaconFinder = (function() {
 
       if (beacon.distance <= 2 && beacon.major<=300  && foundBeacons.indexOf(beacon.major)==-1) {
         console.log('TRIGGER '+beacon.major);
-        foundBeacons.push(beacon.major);
         beaconController.handleBeaconFound(beacon);
 
       } else {
