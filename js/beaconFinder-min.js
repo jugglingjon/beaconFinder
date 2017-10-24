@@ -4,7 +4,6 @@ var beaconFinder = (function() {
 
   // Dictionary of beacons.
   var beacons = {};
-  var foundBeacons=[];
 
   // Timer that displays list of beacons.
   var updateTimer = null;
@@ -83,7 +82,7 @@ var beaconFinder = (function() {
     $.each(beacons, function(key, beacon) {
       //console.log(beacon);
 
-      if (beacon.distance <= 2 && beacon.major<=300  && foundBeacons.indexOf(beacon.major)==-1) {
+      if (beacon.distance <= 2 && beacon.major<=300  && $foundBeacons.indexOf(beacon.major)==-1) {
         console.log('TRIGGER '+beacon.major);
         beaconController.handleBeaconFound(beacon);
 

@@ -5,7 +5,8 @@
 var $currentScreen='screen-splash',
 	$globalFadeTime=400,
 	$currentObject,
-	$scanning=false;
+	$scanning=false
+	$foundBeacons=[];
 
 
 
