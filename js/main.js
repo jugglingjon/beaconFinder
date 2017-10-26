@@ -5,8 +5,13 @@
 var $currentScreen='screen-splash',
 	$globalFadeTime=400,
 	$currentObject,
-	$scanning=false
-	$foundBeacons=[];
+	$scanning=false,
+	$foundBeacons=[],
+	$startTime,
+	$textTimer,
+	$searchTime=60,
+	$timeLeft=$searchTime,
+	$searchTimer;
 
 
 
@@ -71,6 +76,14 @@ function toSpaces(text){
 	return text.replace('-',' ');
 }
 
+function secondsToMS(d) {
+    d = Number(d);
+
+    var m = Math.floor(d % 3600 / 60);
+    var s = Math.floor(d % 3600 % 60);
+
+    return ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2);
+}
 
 // ====================================
 // 				^SCREEN CONTROL
@@ -115,39 +128,63 @@ function fadeSwitch(current,to){
 // 				^BEACONS
 // ====================================
 
-function evalTriggers(){
-	$('.btn-trigger').each(function(){
-		if($objects[$(this).attr('data-id')].found){
-			$(this).css('background','red').addClass('found');
-		}
-	});
-
-	if($('.btn-trigger.found').length==3){
-		alert('game over!');
-	}
-}
-
 
 // ====================================
 // 				^END
 // ====================================
 
 function end(success){
-	$('.end-list').empty().append($('.items-found-list').clone());
-	if(success){
-		$('.end-state').text('Mission Complete!');
-		$('.end-feedback').text('You did it!');
-	}
-	else{
-		$('.end-state').text('Time\'s Up!');
-		$('.end-feedback').text('Go faster next time!');
-	}
+	changeScreen('screen-end',{
+		before:	function(){
+			clearTimeout($searchTimer);
+			clearInterval($textTimer);
+			$('.end-list').empty().append($('.items-found-list').clone());
+			if(success){
+				$('.end-state').text('Mission Complete!');
+				$('.end-feedback').text('You did it!');
+			}
+			else{
+				$('.end-state').text('Time\'s Up!');
+				$('.end-feedback').text('Go faster next time!');
+			}
+		},
+		after: function(){
+			$('.search-alert,.search-found').hide();
+			$('.search-searching').show();
+		}
+	});
+}
+
+
+// ====================================
+// 				^TIMER
+// ====================================
+
+//Timer functions
+function startTimer(){
+	//save current time
+	$startTime=Date.now();
+	$timeLeft=$searchTime;
+
+	//interval countdown
+	$('.timer-time').text(secondsToMS($timeLeft));
+	$textTimer= setInterval(function(){
+		$('.timer-time').text(secondsToMS($timeLeft-1));
+		$timeLeft--;
+	},1000);
+
+	//after question time expires
+	$searchTimer=setTimeout(function(){
+		end(false);
+	},$searchTime*1000);
+
 }
 
 // ====================================
 // 				^EVENTS
 // ====================================
 
+//triggered from beaconlist object, when beacon found, stops scanninga nd populates found screen
 function foundBeacon(foundID){
 	beaconFinder.stop();
 	$scanning=false;
@@ -198,22 +235,13 @@ $(document).ready(function(){
 
 	//from objective to search
 	$('.btn-toSearch').click(function(){
-		changeScreen('screen-search',{after:function(){
-			beaconFinder.initialize();
+		changeScreen('screen-search',{
+			before:function(){
+				startTimer();
+			},
+			after:function(){
+			beaconFinder.initialize();		
 		}});
-	});
-
-	//stop/start scan
-	$('.debutton1').click(function(){
-		if(!$scanning){
-			$('.debutton1').text('STOP');
-			beaconFinder.initialize();
-		}
-		else{
-			$('.debutton1').text('START');
-			beaconFinder.stop();
-		}
-		$scanning=!$scanning;
 	});
 
 	//nav from splash to mission
@@ -227,25 +255,25 @@ $(document).ready(function(){
 	});
 
 	//trigger item find, go to alert, populate quiz template
-	$('.items-found-item').click(function(){
-		var foundID=$(this).attr('data-id');
+	// $('.items-found-item').click(function(){
+	// 	var foundID=$(this).attr('data-id');
 
 
-		$('.found-options').empty();
+	// 	$('.found-options').empty();
 
-		$.each(beaconlist,function(index){
-			if(this.id==foundID){
-				$.get('template-found.html',function(template){
-					//console.log(template);
-					var rendered=Mustache.render(template,beaconlist[index]);
-					$('.search-found').empty().html(rendered);
-					$('.found-options').randomize('.found-option');
-				});
-				return false;
-			}
-		});
-		fadeSwitch('.search-searching','.search-alert');
-	});
+	// 	$.each(beaconlist,function(index){
+	// 		if(this.id==foundID){
+	// 			$.get('template-found.html',function(template){
+	// 				//console.log(template);
+	// 				var rendered=Mustache.render(template,beaconlist[index]);
+	// 				$('.search-found').empty().html(rendered);
+	// 				$('.found-options').randomize('.found-option');
+	// 			});
+	// 			return false;
+	// 		}
+	// 	});
+	// 	fadeSwitch('.search-searching','.search-alert');
+	// });
 
 	//from alert to found quiz
 	$('.search-alert .btn').click(function(){
@@ -289,7 +317,6 @@ $(document).ready(function(){
 
 		if($('.items-found-item.found').length==beaconlist.length){
 			end(true);
-			changeScreen('screen-end');
 		}
 	});
 
