@@ -202,9 +202,6 @@ function foundBeacon(foundID){
 
 	$.each(beaconlist,function(index){
 		if(this.id==foundID){
-			//increase found count
-			$foundCount++;
-			$('.items-found-count').text($foundCount);
 
 			//add to found array
 			$foundBeacons.push(this.major);
@@ -325,6 +322,10 @@ $(document).ready(function(){
 	//continue to search or end
 	$('body').on('click','.btn-continue',function(){
 		var foundIndex=$(this).attr('data-index');
+
+		//increase found count
+		$foundCount++;
+		$('.items-found-count').text($foundCount);
 
 		$('.items-found-item').eq(foundIndex).addClass('found');
 		
