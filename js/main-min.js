@@ -11,7 +11,8 @@ var $currentScreen='screen-splash',
 	$textTimer,
 	$searchTime=60,
 	$timeLeft=$searchTime,
-	$searchTimer;
+	$searchTimer,
+	$foundCount=0;
 
 
 
@@ -135,6 +136,7 @@ function fadeSwitch(current,to){
 
 function end(success){
 	beaconFinder.stop();
+	$foundCount=0;
 	$scanning=false;
 
 	changeScreen('screen-end',{
@@ -200,7 +202,14 @@ function foundBeacon(foundID){
 
 	$.each(beaconlist,function(index){
 		if(this.id==foundID){
+			//increase found count
+			$foundCount++;
+			$('.items-found-count').text($foundCount);
+
+			//add to found array
 			$foundBeacons.push(this.major);
+
+			//render found template
 			$.get('template-found.html',function(template){
 				//console.log(template);
 				var rendered=Mustache.render(template,beaconlist[index]);
