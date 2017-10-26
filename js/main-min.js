@@ -134,6 +134,9 @@ function fadeSwitch(current,to){
 // ====================================
 
 function end(success){
+	beaconFinder.stop();
+	$scanning=false;
+	
 	changeScreen('screen-end',{
 		before:	function(){
 			clearTimeout($searchTimer);
@@ -151,6 +154,11 @@ function end(success){
 		after: function(){
 			$('.search-alert,.search-found').hide();
 			$('.search-searching').show();
+
+			$.each(beaconlist,function(){
+				this.found=false;
+			});
+			$foundBeacons=[];
 		}
 	});
 }
@@ -324,10 +332,6 @@ $(document).ready(function(){
 	$('.btn-restart').click(function(){
 		changeScreen('screen-splash',{before:function(){
 			$('.items-found-item').removeClass('found');
-			$.each(beaconlist,function(){
-				this.found=false;
-			});
-			$foundBeacons=[];
 		}});
 	});
 
