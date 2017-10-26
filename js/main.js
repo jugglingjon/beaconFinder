@@ -136,7 +136,7 @@ function fadeSwitch(current,to){
 function end(success){
 	beaconFinder.stop();
 	$scanning=false;
-	
+
 	changeScreen('screen-end',{
 		before:	function(){
 			clearTimeout($searchTimer);
@@ -318,13 +318,15 @@ $(document).ready(function(){
 		var foundIndex=$(this).attr('data-index');
 
 		$('.items-found-item').eq(foundIndex).addClass('found');
-		fadeSwitch('.search-found','.search-searching');
-		setTimeout(function(){
-			beaconFinder.initialize();
-		},$globalFadeTime);
-
+		
 		if($('.items-found-item.found').length==beaconlist.length){
 			end(true);
+		}
+		else{
+			fadeSwitch('.search-found','.search-searching');
+			setTimeout(function(){
+				beaconFinder.initialize();
+			},$globalFadeTime);
 		}
 	});
 
