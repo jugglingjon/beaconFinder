@@ -9,7 +9,7 @@ var $currentScreen='screen-splash',
 	$foundBeacons=[],
 	$startTime,
 	$textTimer,
-	$searchTime=60,
+	$searchTime=600,
 	$timeLeft=$searchTime,
 	$searchTimer,
 	$foundCount=0;
@@ -156,6 +156,7 @@ function end(success){
 		after: function(){
 			$('.search-alert,.search-found').hide();
 			$('.search-searching').show();
+			$('.items-found-count').text('0');
 
 			$.each(beaconlist,function(){
 				this.found=false;
