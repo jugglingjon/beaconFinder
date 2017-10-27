@@ -246,6 +246,9 @@ body {
 .instruction-pane .btn {
   margin-top: 30px;
 }
+.screen-mission .instruction-pane {
+  top: 220px;
+}
 .items-found-list {
   height: 200px;
   text-align: center;

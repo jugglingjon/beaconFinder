@@ -146,7 +146,7 @@ function end(success){
 			$('.end-list').empty().append($('.items-found-list').clone());
 			if(success){
 				$('.end-state').text('Mission Complete!');
-				$('.end-feedback').text('You did it!');
+				$('.end-feedback').text('Congratulations! The items you collected have linked Khaled Hajar to IED making activities.  These were sent to the Forensics Lab for analysis. The stain on the shirt was identified as hydrochloric acid, a precursor of HME. The wire cutters were linked to the cut marks on the wire used to make the IED. Finally, Khaled Hajar’s DNA was collected from the tape. The tape was also positively identified as the same tape used to make the IED.');
 			}
 			else{
 				$('.end-state').text('Time\'s Up!');
