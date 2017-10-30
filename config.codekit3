@@ -381,6 +381,14 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/img\/shirt.png": {
+		"ft": 32768,
+		"iS": 237580,
+		"oA": 0,
+		"oAP": "\/img\/shirt.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/img\/soldier1-thumb-highlight.png": {
 		"ft": 32768,
 		"iS": 95025,

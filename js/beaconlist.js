@@ -45,7 +45,7 @@ var beaconlist = [
     },
     {
       "name": "Paper",
-      "slug": "Paper"
+      "slug": "paper"
     }
   ],
   "response": "The shirt is the best option to answer the PIR. Khaled Hajar is a tailor, so it’s not unusual to find clothing in his business or residence; however, this shirt has several burns on the sleeves. A Forensic chemist can analyze the residue to determine if it’s a precursor used in the manufacture of HME. The twine and paper offer little forensic value to link Hajar to IED making activities—neither is an IED component and both are common supplies used in his business.",
