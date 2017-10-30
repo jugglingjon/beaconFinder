@@ -285,6 +285,22 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/img\/cigarette.png": {
+		"ft": 32768,
+		"iS": 95158,
+		"oA": 0,
+		"oAP": "\/img\/cigarette.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/cup.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/cup.png",
+		"oF": 0,
+		"opt": 1
+		},
 	"\/img\/found-frame.png": {
 		"ft": 32768,
 		"iS": 79913,
@@ -309,6 +325,22 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/img\/magazine.png": {
+		"ft": 32768,
+		"iS": 657676,
+		"oA": 0,
+		"oAP": "\/img\/magazine.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/paper.png": {
+		"ft": 32768,
+		"iS": 718065,
+		"oA": 0,
+		"oAP": "\/img\/paper.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/papers-frame.png": {
 		"ft": 32768,
 		"iS": 208244,
@@ -322,6 +354,14 @@
 		"iS": 190421,
 		"oA": 0,
 		"oAP": "\/img\/papers.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/passport.png": {
+		"ft": 32768,
+		"iS": 567811,
+		"oA": 0,
+		"oAP": "\/img\/passport.png",
 		"oF": 0,
 		"opt": 0
 		},
@@ -394,6 +434,30 @@
 		"iS": 220862,
 		"oA": 0,
 		"oAP": "\/img\/splash.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/tape.png": {
+		"ft": 32768,
+		"iS": 0,
+		"oA": 0,
+		"oAP": "\/img\/tape.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/tool.png": {
+		"ft": 32768,
+		"iS": 483631,
+		"oA": 0,
+		"oAP": "\/img\/tool.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/img\/twine.png": {
+		"ft": 32768,
+		"iS": 859965,
+		"oA": 0,
+		"oAP": "\/img\/twine.png",
 		"oF": 0,
 		"opt": 0
 		},
@@ -581,6 +645,238 @@
 		"oA": 2,
 		"oAP": "\/read.me",
 		"oF": 0
+		},
+	"\/res\/icons\/ios\/icon-1024.png": {
+		"ft": 32768,
+		"iS": 295381,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-1024.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-167.png": {
+		"ft": 32768,
+		"iS": 16772,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-167.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-60.png": {
+		"ft": 32768,
+		"iS": 3983,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-60.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-60@2x.png": {
+		"ft": 32768,
+		"iS": 10719,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-60@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-60@3x.png": {
+		"ft": 32768,
+		"iS": 18655,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-60@3x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-72.png": {
+		"ft": 32768,
+		"iS": 5232,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-72.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-72@2x.png": {
+		"ft": 32768,
+		"iS": 13813,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-72@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-76.png": {
+		"ft": 32768,
+		"iS": 5524,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-76.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-76@2x.png": {
+		"ft": 32768,
+		"iS": 14728,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-76@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-83.5@2x.png": {
+		"ft": 32768,
+		"iS": 16772,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-83.5@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small-40.png": {
+		"ft": 32768,
+		"iS": 2093,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small-40.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small-40@2x.png": {
+		"ft": 32768,
+		"iS": 6053,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small-40@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small-40@3x.png": {
+		"ft": 32768,
+		"iS": 10719,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small-40@3x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small-50.png": {
+		"ft": 32768,
+		"iS": 3053,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small-50.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small-50@2x.png": {
+		"ft": 32768,
+		"iS": 8381,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small-50@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small.png": {
+		"ft": 32768,
+		"iS": 1326,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small@2x.png": {
+		"ft": 32768,
+		"iS": 3787,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon-small@3x.png": {
+		"ft": 32768,
+		"iS": 6835,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon-small@3x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon.png": {
+		"ft": 32768,
+		"iS": 3638,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/icons\/ios\/icon@2x.png": {
+		"ft": 32768,
+		"iS": 10110,
+		"oA": 0,
+		"oAP": "\/res\/icons\/ios\/icon@2x.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default-568h@2x~iphone.png": {
+		"ft": 32768,
+		"iS": 186073,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default-568h@2x~iphone.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default-667h.png": {
+		"ft": 32768,
+		"iS": 247515,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default-667h.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default-736h.png": {
+		"ft": 32768,
+		"iS": 598334,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default-736h.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default-Landscape@2x~ipad.png": {
+		"ft": 32768,
+		"iS": 1129985,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default-Landscape@2x~ipad.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default-Landscape~ipad.png": {
+		"ft": 32768,
+		"iS": 406785,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default-Landscape~ipad.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default-Portrait@2x~ipad.png": {
+		"ft": 32768,
+		"iS": 849173,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default-Portrait@2x~ipad.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default-Portrait~ipad.png": {
+		"ft": 32768,
+		"iS": 252587,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default-Portrait~ipad.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default@2x~iphone.png": {
+		"ft": 32768,
+		"iS": 184364,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default@2x~iphone.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/res\/screens\/ios\/Default~iphone.png": {
+		"ft": 32768,
+		"iS": 55658,
+		"oA": 0,
+		"oAP": "\/res\/screens\/ios\/Default~iphone.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/template-feedbackModal.html": {
 		"ft": 8192,

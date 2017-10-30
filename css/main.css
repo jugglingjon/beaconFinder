@@ -264,9 +264,11 @@ body {
 }
 .items-found-list .items-found-item img {
   position: absolute;
-  left: 0;
+  top: 0;
   right: 0;
-  margin: 22px auto 0 auto;
+  bottom: 40px;
+  left: 0;
+  margin: auto;
   display: none;
   filter: drop-shadow(0px 0px 40px #ffc700);
   max-width: 80%;
@@ -407,35 +409,6 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-.screen-search .items-found .items-found-list {
-  height: 200px;
-  text-align: center;
-}
-.screen-search .items-found .items-found-list .items-found-item {
-  display: inline-block;
-  position: relative;
-  height: 188px;
-  width: 200px;
-  margin: 0 20px;
-  background: url('../img/item-blank.png') no-repeat left top;
-  background-size: contain;
-}
-.screen-search .items-found .items-found-list .items-found-item img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 22px auto 0 auto;
-  display: none;
-  filter: drop-shadow(0px 0px 40px #ffc700);
-  max-width: 80%;
-  max-height: 100px;
-}
-.screen-search .items-found .items-found-list .items-found-item.found {
-  background-image: url('../img/found-frame.png');
-}
-.screen-search .items-found .items-found-list .items-found-item.found img {
-  display: block;
-}
 .screen-search .pulse {
   position: absolute;
   left: 0;
@@ -575,6 +548,7 @@ body {
   letter-spacing: 2px;
 }
 .screen-search .search-found h2 {
+  min-height: 100px;
   font-family: 'Roboto Condensed';
   font-weight: 300;
   font-size: 18px;
@@ -586,9 +560,22 @@ body {
   margin: 0 auto;
   left: 0;
 }
-.screen-search .search-found .found-options .found-option img {
-  max-width: 70%;
-  margin: 40px 0;
+.screen-search .search-found .found-options .found-option {
+  display: block;
+}
+.screen-search .search-found .found-options .found-option .found-option-image_wrapper {
+  height: 230px;
+  position: relative;
+}
+.screen-search .search-found .found-options .found-option .found-option-image_wrapper img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 210px;
+  max-height: 150px;
   filter: drop-shadow(0px 0px 30px black);
   transition: 0.3s ease-out all;
 }
@@ -600,7 +587,8 @@ body {
   opacity: 1;
 }
 .screen-end .end-content {
-  margin-top: 200px;
+  margin: 180px auto 0 auto;
+  max-width: 80%;
   text-align: center;
 }
 .screen-end .end-content h1 {

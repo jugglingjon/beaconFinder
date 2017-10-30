@@ -12,12 +12,12 @@ var beaconlist = [
   "id": 100,
   "distractors":[
     {
-      "name": "Papers",
-      "slug": "papers"
+      "name": "Cup",
+      "slug": "cup"
     },
     {
-      "name": "VHS",
-      "slug": "vhs"
+      "name": "Tape",
+      "slug": "tape"
     }
   ],
   "response": "Many tools used to manufacture IEDs make marks that can be linked to a specific tool. Forensic analysts may be able to link the wire cutters to the IED as well as capture DNA to associate Hajar with IED making activities.",

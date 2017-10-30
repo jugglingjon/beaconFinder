@@ -8,12 +8,16 @@
 </div>
 <div class="found-options row">
 	<div class="found-option col-4 correct">
-		<img src="img/{{slug}}.png">
+		<div class="found-option-image_wrapper">
+			<img src="img/{{slug}}.png">
+		</div>
 		<a href="#" class="btn btn-primary" data-index="{{ind}}">Collect</a>
 	</div>
 	{{#distractors}}
 	<div class="found-option col-4">
-		<img src="img/{{slug}}.png">
+		<div class="found-option-image_wrapper">
+			<img src="img/{{slug}}.png">
+		</div>
 		<a href="#" class="btn btn-primary" data-index="{{ind}}">Collect</a>
 	</div>
 	{{/distractors}}

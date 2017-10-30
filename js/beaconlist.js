@@ -7,20 +7,20 @@ var beaconlist = [
   "minors":[1,2],
   "text":'You found location 1.',
   "found":false,
-  "name": "Phone",
-  "slug": "phone",
+  "name": "Tool",
+  "slug": "tool",
   "id": 100,
   "distractors":[
     {
-      "name": "Papers",
-      "slug": "papers"
+      "name": "Cup",
+      "slug": "cup"
     },
     {
-      "name": "VHS",
-      "slug": "vhs"
+      "name": "Cigarette",
+      "slug": "cigarette"
     }
   ],
-  "response": "Many tools used to manufacture IEDs make marks that can be linked to a specific tool. Forensic analysts may be able to link the wire cutters to the IED as well as capture DNA to associate Hajar with IED making activities.",
+  "response": "The tool is best option to answer the PIR. Many tools used to manufacture IEDs make marks and these marks can be linked to a specific tool. There is also the potential to capture fingerprints from the tool to link to Khaled Hajar. While the cigarette and cup are good sources of biometric data, Khaled Hajar’s identity is confirmed. Neither the cigarette nor cup are IED components, giving these items little value in linking Hajar to IED making activities.",
   "ind":0,
   "onFind":function(){
     //what to do when beacon 1 is found
@@ -35,20 +35,20 @@ var beaconlist = [
   "minors":[1,2],
   "text":'You found location 2.',
   "found":false,
-  "name": "VHS",
-  "slug": "vhs",
+  "name": "Shirt",
+  "slug": "shirt",
   "id": 200,
   "distractors":[
     {
-      "name": "Phone",
-      "slug": "phone"
+      "name": "Twine",
+      "slug": "twine"
     },
     {
-      "name": "Papers",
-      "slug": "papers"
+      "name": "Paper",
+      "slug": "Paper"
     }
   ],
-  "response": "Hajar is a tailor, so it would not be unusual to find clothing in a tailor’s business or residence; however, this clothing has several burns on the front. A Forensic chemist can analyze the residue to determine if it is a precursor used in the manufacture of HME.",
+  "response": "The shirt is the best option to answer the PIR. Khaled Hajar is a tailor, so it’s not unusual to find clothing in his business or residence; however, this shirt has several burns on the sleeves. A Forensic chemist can analyze the residue to determine if it’s a precursor used in the manufacture of HME. The twine and paper offer little forensic value to link Hajar to IED making activities—neither is an IED component and both are common supplies used in his business.",
   "ind":1,
   "onFind":function(){
     //what to do when beacon 2 is found
@@ -63,20 +63,20 @@ var beaconlist = [
   "minors":[1,2],
   "text":'You found location 3.',
   "found":false,
-  "name": "Papers",
-  "slug": "papers",
+  "name": "Tape",
+  "slug": "tape",
   "id": 300,
   "distractors":[
     {
-      "name": "Phone",
-      "slug": "phone"
+      "name": "Passport",
+      "slug": "passport"
     },
     {
-      "name": "VHS",
-      "slug": "vhs"
+      "name": "Magazine",
+      "slug": "magazine"
     }
   ],
-  "response": "The tape can be forensically analyzed to link the device to a specific person or IED. Analysts can compare tape used on the IED to the tape found here. Tape is also an excellent source of DNA, which can link a device to a suspected bombmaker.",
+  "response": "The electrical tape is the best option to answer the PIR. Forensic analysts can compare tape used on an IED to the tape found here. Tape is also a source of DNA and fingerprints, which can potentially link an IED to Khaled Hajar. Passports can confirm a person’s identity; however, Hajar’s identify is confirmed. The passport offers little value for tracking movements if all activities are local. The magazine only offers insight into Hajar’s interests, not IED making activities. ",
   "ind":2,
   "onFind":function(){
     //what to do when beacon 3 is found
