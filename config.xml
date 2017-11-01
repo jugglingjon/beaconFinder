@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.evothings.beaconfinder"
-	version="0.e.0"
+<widget id="com.bah.search"
+	version="0.1"
 	xmlns="http://www.w3.org/ns/widgets"
 	xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>BeaconFinder</name>
+    <name>Search</name>
     <description>
-        Estimote Beacon demo app.
+        Search
     </description>
     <author email="stohrer_kurt@bah.com" href="http://evothings.com">
         Kurt Stohrer

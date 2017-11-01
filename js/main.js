@@ -12,7 +12,8 @@ var $currentScreen='screen-splash',
 	$searchTime=600,
 	$timeLeft=$searchTime,
 	$searchTimer,
-	$foundCount=0;
+	$foundCount=0,
+	$version='0.1';
 
 
 
@@ -149,8 +150,8 @@ function end(success){
 				$('.end-feedback').text('Congratulations! The items you collected have linked Khaled Hajar to IED making activities.  These were sent to the Forensics Lab for analysis. The stain on the shirt was identified as hydrochloric acid, a precursor of HME. The wire cutters were linked to the cut marks on the wire used to make the IED. Finally, Khaled Hajar’s DNA was collected from the tape. The tape was also positively identified as the same tape used to make the IED.');
 			}
 			else{
-				$('.end-state').text('Time\'s Up!');
-				$('.end-feedback').text('Go faster next time!');
+				$('.end-state').text('Time is up!');
+				$('.end-feedback').text('You were not able to find all the evidence in the given time. Next time, try thinking like the enemy and use systematic search procedures.');
 			}
 		},
 		after: function(){
@@ -222,6 +223,9 @@ function foundBeacon(foundID){
 
 $(document).ready(function(){
 
+	//append version
+	$('.screen-splash').append($('<div class="version">v'+$version+'</div>'));
+
 	//Preload images
 	var images = new Array()
 	
@@ -261,7 +265,7 @@ $(document).ready(function(){
 
 	//nav from splash to mission
 	$('.screen-splash').click(function(){
-		changeScreen('screen-mission');
+		changeScreen('screen-how');
 	})
 
 	//opens hint panes

@@ -175,9 +175,9 @@ body {
 }
 .screen-splash h1 {
   font-family: Oswald;
-  font-size: 68px;
+  font-size: 62px;
   color: #FFFFFF;
-  letter-spacing: 28px;
+  letter-spacing: 8px;
   text-transform: uppercase;
 }
 .screen-splash h2 {
@@ -190,7 +190,7 @@ body {
 }
 .screen-splash h4 {
   position: fixed;
-  bottom: 40px;
+  bottom: 60px;
   width: 100%;
   left: 0;
   text-align: center;
@@ -201,6 +201,39 @@ body {
   letter-spacing: 2px;
   line-height: 18px;
   text-transform: uppercase;
+}
+.screen-splash .version {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  opacity: .5;
+  text-align: center;
+}
+.screen-how .how-pane {
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 260px;
+}
+.screen-how .how-pane h1 {
+  font-family: Oswald;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 56px;
+  color: #EFEFEF;
+  letter-spacing: 2px;
+}
+.screen-how .how-pane p {
+  /* This is where the mi: */
+  font-family: 'Roboto Condensed';
+  font-weight: 300;
+  font-size: 18px;
+  color: #D9D9D9;
+  letter-spacing: 0;
+  line-height: 23px;
 }
 .screen-mission {
   background: url('../img/soldier1.png') no-repeat center center;
