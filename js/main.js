@@ -13,7 +13,7 @@ var $currentScreen='screen-splash',
 	$timeLeft=$searchTime,
 	$searchTimer,
 	$foundCount=0,
-	$version='0.1';
+	$version='0.2';
 
 
 

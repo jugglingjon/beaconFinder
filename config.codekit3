@@ -269,6 +269,14 @@
 		"oAP": "\/fonts\/RobotoCondensed-Regular.ttf",
 		"oF": 0
 		},
+	"\/icon.png": {
+		"ft": 32768,
+		"iS": 5305,
+		"oA": 0,
+		"oAP": "\/icon.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/background.png": {
 		"ft": 32768,
 		"iS": 726831,
@@ -381,6 +389,14 @@
 		"oF": 0,
 		"opt": 1
 		},
+	"\/img\/shirt.png": {
+		"ft": 32768,
+		"iS": 1301343,
+		"oA": 0,
+		"oAP": "\/img\/shirt.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/img\/soldier1-thumb-highlight.png": {
 		"ft": 32768,
 		"iS": 95025,
@@ -431,7 +447,7 @@
 		},
 	"\/img\/splash.jpg": {
 		"ft": 16384,
-		"iS": 220862,
+		"iS": 607794,
 		"oA": 0,
 		"oAP": "\/img\/splash.jpg",
 		"oF": 0,
@@ -648,7 +664,7 @@
 		},
 	"\/res\/icons\/ios\/icon-1024.png": {
 		"ft": 32768,
-		"iS": 295381,
+		"iS": 317207,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-1024.png",
 		"oF": 0,
@@ -656,7 +672,7 @@
 		},
 	"\/res\/icons\/ios\/icon-167.png": {
 		"ft": 32768,
-		"iS": 16772,
+		"iS": 21237,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-167.png",
 		"oF": 0,
@@ -664,7 +680,7 @@
 		},
 	"\/res\/icons\/ios\/icon-60.png": {
 		"ft": 32768,
-		"iS": 3983,
+		"iS": 4853,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-60.png",
 		"oF": 0,
@@ -672,7 +688,7 @@
 		},
 	"\/res\/icons\/ios\/icon-60@2x.png": {
 		"ft": 32768,
-		"iS": 10719,
+		"iS": 13302,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-60@2x.png",
 		"oF": 0,
@@ -680,7 +696,7 @@
 		},
 	"\/res\/icons\/ios\/icon-60@3x.png": {
 		"ft": 32768,
-		"iS": 18655,
+		"iS": 23875,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-60@3x.png",
 		"oF": 0,
@@ -688,7 +704,7 @@
 		},
 	"\/res\/icons\/ios\/icon-72.png": {
 		"ft": 32768,
-		"iS": 5232,
+		"iS": 6407,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-72.png",
 		"oF": 0,
@@ -696,7 +712,7 @@
 		},
 	"\/res\/icons\/ios\/icon-72@2x.png": {
 		"ft": 32768,
-		"iS": 13813,
+		"iS": 17252,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-72@2x.png",
 		"oF": 0,
@@ -704,7 +720,7 @@
 		},
 	"\/res\/icons\/ios\/icon-76.png": {
 		"ft": 32768,
-		"iS": 5524,
+		"iS": 6905,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-76.png",
 		"oF": 0,
@@ -712,7 +728,7 @@
 		},
 	"\/res\/icons\/ios\/icon-76@2x.png": {
 		"ft": 32768,
-		"iS": 14728,
+		"iS": 18536,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-76@2x.png",
 		"oF": 0,
@@ -720,7 +736,7 @@
 		},
 	"\/res\/icons\/ios\/icon-83.5@2x.png": {
 		"ft": 32768,
-		"iS": 16772,
+		"iS": 21237,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-83.5@2x.png",
 		"oF": 0,
@@ -728,7 +744,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small-40.png": {
 		"ft": 32768,
-		"iS": 2093,
+		"iS": 2545,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small-40.png",
 		"oF": 0,
@@ -736,7 +752,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small-40@2x.png": {
 		"ft": 32768,
-		"iS": 6053,
+		"iS": 7404,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small-40@2x.png",
 		"oF": 0,
@@ -744,7 +760,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small-40@3x.png": {
 		"ft": 32768,
-		"iS": 10719,
+		"iS": 13302,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small-40@3x.png",
 		"oF": 0,
@@ -752,7 +768,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small-50.png": {
 		"ft": 32768,
-		"iS": 3053,
+		"iS": 3668,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small-50.png",
 		"oF": 0,
@@ -760,7 +776,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small-50@2x.png": {
 		"ft": 32768,
-		"iS": 8381,
+		"iS": 10164,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small-50@2x.png",
 		"oF": 0,
@@ -768,7 +784,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small.png": {
 		"ft": 32768,
-		"iS": 1326,
+		"iS": 1559,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small.png",
 		"oF": 0,
@@ -776,7 +792,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small@2x.png": {
 		"ft": 32768,
-		"iS": 3787,
+		"iS": 4579,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small@2x.png",
 		"oF": 0,
@@ -784,7 +800,7 @@
 		},
 	"\/res\/icons\/ios\/icon-small@3x.png": {
 		"ft": 32768,
-		"iS": 6835,
+		"iS": 8352,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon-small@3x.png",
 		"oF": 0,
@@ -792,7 +808,7 @@
 		},
 	"\/res\/icons\/ios\/icon.png": {
 		"ft": 32768,
-		"iS": 3638,
+		"iS": 4461,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon.png",
 		"oF": 0,
@@ -800,7 +816,7 @@
 		},
 	"\/res\/icons\/ios\/icon@2x.png": {
 		"ft": 32768,
-		"iS": 10110,
+		"iS": 12323,
 		"oA": 0,
 		"oAP": "\/res\/icons\/ios\/icon@2x.png",
 		"oF": 0,
