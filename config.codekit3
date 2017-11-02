@@ -824,7 +824,7 @@
 		},
 	"\/res\/screens\/ios\/Default-568h@2x~iphone.png": {
 		"ft": 32768,
-		"iS": 186073,
+		"iS": 203306,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default-568h@2x~iphone.png",
 		"oF": 0,
@@ -832,7 +832,7 @@
 		},
 	"\/res\/screens\/ios\/Default-667h.png": {
 		"ft": 32768,
-		"iS": 247515,
+		"iS": 272015,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default-667h.png",
 		"oF": 0,
@@ -840,7 +840,7 @@
 		},
 	"\/res\/screens\/ios\/Default-736h.png": {
 		"ft": 32768,
-		"iS": 598334,
+		"iS": 682750,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default-736h.png",
 		"oF": 0,
@@ -848,7 +848,7 @@
 		},
 	"\/res\/screens\/ios\/Default-Landscape@2x~ipad.png": {
 		"ft": 32768,
-		"iS": 1129985,
+		"iS": 1549127,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default-Landscape@2x~ipad.png",
 		"oF": 0,
@@ -856,7 +856,7 @@
 		},
 	"\/res\/screens\/ios\/Default-Landscape~ipad.png": {
 		"ft": 32768,
-		"iS": 406785,
+		"iS": 464626,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default-Landscape~ipad.png",
 		"oF": 0,
@@ -864,7 +864,7 @@
 		},
 	"\/res\/screens\/ios\/Default-Portrait@2x~ipad.png": {
 		"ft": 32768,
-		"iS": 849173,
+		"iS": 996257,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default-Portrait@2x~ipad.png",
 		"oF": 0,
@@ -872,7 +872,7 @@
 		},
 	"\/res\/screens\/ios\/Default-Portrait~ipad.png": {
 		"ft": 32768,
-		"iS": 252587,
+		"iS": 281153,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default-Portrait~ipad.png",
 		"oF": 0,
@@ -880,7 +880,7 @@
 		},
 	"\/res\/screens\/ios\/Default@2x~iphone.png": {
 		"ft": 32768,
-		"iS": 184364,
+		"iS": 202630,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default@2x~iphone.png",
 		"oF": 0,
@@ -888,9 +888,17 @@
 		},
 	"\/res\/screens\/ios\/Default~iphone.png": {
 		"ft": 32768,
-		"iS": 55658,
+		"iS": 61626,
 		"oA": 0,
 		"oAP": "\/res\/screens\/ios\/Default~iphone.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/splash.png": {
+		"ft": 32768,
+		"iS": 74832,
+		"oA": 0,
+		"oAP": "\/splash.png",
 		"oF": 0,
 		"opt": 0
 		},
