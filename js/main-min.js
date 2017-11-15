@@ -347,15 +347,17 @@ $(document).ready(function(){
 
 	//simulate ibeacon found with long press
 	var pressTimer;
-	$('.items-found-item').mouseup(function(){
+	$('.items-found-item').bind('touchend',function(){
 		clearTimeout(pressTimer);
+		console.log('aborted');
 		// Clear timeout
 		return false;
-	}).mousedown(function(){
+	}).bind('touchstart',function(){
 		// Set timeout
 		var el=$(this);
-
+		console.log('touchstart')
 		pressTimer = window.setTimeout(function() {
+			console.log('hold complete');
 			foundBeacon(el.attr('data-id'));
 		},3000);
 
