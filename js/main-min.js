@@ -13,7 +13,7 @@ var $currentScreen='screen-splash',
 	$timeLeft=$searchTime,
 	$searchTimer,
 	$foundCount=0,
-	$version='0.2';
+	$version='0.3';
 
 
 
@@ -343,6 +343,23 @@ $(document).ready(function(){
 				beaconFinder.initialize();
 			},$globalFadeTime);
 		}
+	});
+
+	//simulate ibeacon found with long press
+	var pressTimer;
+	$('.items-found-item').mouseup(function(){
+		clearTimeout(pressTimer);
+		// Clear timeout
+		return false;
+	}).mousedown(function(){
+		// Set timeout
+		var el=$(this);
+
+		pressTimer = window.setTimeout(function() {
+			foundBeacon(el.attr('data-id'));
+		},3000);
+
+		return false; 
 	});
 
 	//restart game
