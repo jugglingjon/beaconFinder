@@ -294,6 +294,8 @@ body {
   margin: 0 20px;
   background: url('../img/item-blank.png') no-repeat left top;
   background-size: contain;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
 }
 .items-found-list .items-found-item img {
   position: absolute;
