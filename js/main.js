@@ -219,6 +219,8 @@ function foundBeacon(foundID){
 		}
 	});
 	fadeSwitch('.search-searching','.search-alert');
+	var snd = new Audio('media/ding.mp3'); // buffers automatically when created
+	snd.play();
 }
 
 $(document).ready(function(){
