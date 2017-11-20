@@ -656,6 +656,12 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/media\/ding.mp3": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/media\/ding.mp3",
+		"oF": 0
+		},
 	"\/read.me": {
 		"ft": 8192,
 		"oA": 2,
